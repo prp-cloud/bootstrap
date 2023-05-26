@@ -1,6 +1,7 @@
 {
-"compilerOptions": {
-"strict": true,
-	"target": "esnext"
-}
+	"compilerOptions": {
+		"module": "esnext",
+		"strict": true,
+		"target": "esnext"
+	}
 }
