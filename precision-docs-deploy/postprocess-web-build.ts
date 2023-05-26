@@ -7,18 +7,6 @@ const matches = await Promise.all(
 			[...`${await readFile(`${dirent.path}/${dirent.name}`)}`.matchAll(/[^ ]+(?=docs)/g)]
 		)
 );
-
-for (const [)
-
-console.log(
-	[
-		...new Set(
-			(
-			)
-				.flat()
-		)
-	]
-		.sort()
-);
+console.log(matches);
 
 process.exit();
