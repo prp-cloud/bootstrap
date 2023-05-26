@@ -1,6 +1,7 @@
 {
 	"compilerOptions": {
 		"module": "esnext",
+		"noUncheckedIndexedAccess": true,
 		"strict": true,
 		"target": "esnext"
 	}
