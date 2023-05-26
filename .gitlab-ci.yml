@@ -11,6 +11,6 @@ deploy_production:
     - cd precision-docs-deploy && npm ci && npx tsc && cd ..
     - npm run docs-build
     - node precision-docs-deploy
-    - rsync -amz --delete _site cloud-qa:/var/app/cloud/htdocs/bootstrap
+    - rsync -amz --delete _site/ cloud-qa:/var/app/cloud/htdocs/bootstrap
   only:
     - precision
