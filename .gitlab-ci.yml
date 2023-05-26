@@ -1,0 +1,16 @@
+before_script:
+  - echo '' > /home/gitlab-runner/.ssh/known_hosts
+  - ssh-keyscan -t ed25519 3.213.159.140 > /home/gitlab-runner/.ssh/known_hosts
+  - cat /home/gitlab-runner/.ssh/known_hosts
+
+deploy_production:
+  environment:
+    name: precision
+  script:
+    - npm ci
+    - cd precision-docs-deploy && npm ci && npx tsc && cd ..
+    - npm run docs
+    - node precision-docs-deploy
+    - rsync -amz --delete _site cloud-qa:/var/app/cloud/htdocs/bootstrap
+  only:
+    - precision

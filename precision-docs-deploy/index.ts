@@ -8,10 +8,10 @@ const recurse = async (dir: string): Promise<unknown> =>
 				if (!dirent.isFile()) return recurse(path);
 				if (!dirent.name.endsWith(`.html`)) return;
 				const contents = `${await readFile(path)}`;
-				const replaced = contents.replaceAll(/(?<=(href|src)=")(?=\/docs)/g, `/bootstrap`);
+				const replaced = contents.replaceAll(/(?<=(href|src(set)?)=")(?=\/docs)/g, `/bootstrap`);
 				if (contents != replaced) return writeFile(path, replaced);
 			})
 	);
 
-await recurse(`../_site`)
+await recurse(`_site`)
 process.exit();
