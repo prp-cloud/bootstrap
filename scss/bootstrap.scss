@@ -7,12 +7,15 @@
 // scss-docs-start import-stack
 // Configuration
 @import "functions";
-@import "variables";
-@import "variables-dark";
 
 // Overrides
 $primary: #00865f;
 $font-family-sans-serif: "Roboto";
+$display-font-family: "Montserrat";
+$display-font-weight: 500;
+
+@import "variables";
+@import "variables-dark";
 
 @import "maps";
 @import "mixins";
