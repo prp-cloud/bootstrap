@@ -30,7 +30,7 @@
           item.url :
           // On development or Netlify, replace `item.url` with a trailing slash,
           // so that the result link is relative to the server root
-          item.url.replace(liveUrl, '/bootstrap/')
+          item.url.replace(liveUrl, window.location.hostname === 'localhost' ? '/' : '/bootstrap/')
 
         // Prevent jumping to first header
         if (item.anchor === 'content') {
