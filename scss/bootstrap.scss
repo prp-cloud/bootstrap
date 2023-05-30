@@ -1,12 +1,18 @@
 @import "mixins/banner";
 @include bsBanner("");
 
-
 // scss-docs-start import-stack
 // Configuration
 @import "functions";
 @import "variables";
 @import "variables-dark";
+
+// Variable overrides
+$primary: #00865f;
+$font-family-sans-serif: "Roboto";
+
+// Map overrides
+
 @import "maps";
 @import "mixins";
 @import "utilities";
