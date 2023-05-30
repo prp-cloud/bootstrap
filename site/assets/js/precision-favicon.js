@@ -9,7 +9,7 @@
           const ctx = canvas.getContext('2d')
           ctx.filter = 'hue-rotate(220deg)'
           ctx.drawImage(icon, 0, 0)
-          link.href = (URL.createObjectURL(await canvas.convertToBlob()))
+          link.href = URL.createObjectURL(await canvas.convertToBlob())
         },
         src: link.href
       }
