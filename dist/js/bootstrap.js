@@ -330,6 +330,7 @@
    * --------------------------------------------------------------------------
    */
 
+
   /**
    * Constants
    */
@@ -608,6 +609,7 @@
    * --------------------------------------------------------------------------
    */
 
+
   /**
    * Class definition
    */
@@ -659,6 +661,7 @@
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
+
 
   /**
    * Constants
@@ -727,6 +730,7 @@
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
+
   const getSelector = element => {
     let selector = element.getAttribute('data-bs-target');
     if (!selector || selector === '#') {
@@ -815,6 +819,7 @@
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
+
   const enableDismissTrigger = (component, method = 'hide') => {
     const clickEvent = `click.dismiss${component.EVENT_KEY}`;
     const name = component.NAME;
@@ -839,6 +844,7 @@
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
+
 
   /**
    * Constants
@@ -914,6 +920,7 @@
    * --------------------------------------------------------------------------
    */
 
+
   /**
    * Constants
    */
@@ -976,6 +983,7 @@
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
+
 
   /**
    * Constants
@@ -1095,6 +1103,7 @@
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
+
 
   /**
    * Constants
@@ -1468,6 +1477,7 @@
    * --------------------------------------------------------------------------
    */
 
+
   /**
    * Constants
    */
@@ -1700,6 +1710,7 @@
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
+
 
   /**
    * Constants
@@ -2068,6 +2079,7 @@
    * --------------------------------------------------------------------------
    */
 
+
   /**
    * Constants
    */
@@ -2192,6 +2204,7 @@
    * --------------------------------------------------------------------------
    */
 
+
   /**
    * Constants
    */
@@ -2290,6 +2303,7 @@
    * --------------------------------------------------------------------------
    */
 
+
   /**
    * Constants
    */
@@ -2386,6 +2400,7 @@
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
+
 
   /**
    * Constants
@@ -2690,6 +2705,7 @@
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
+
 
   /**
    * Constants
@@ -3014,6 +3030,7 @@
    * --------------------------------------------------------------------------
    */
 
+
   /**
    * Constants
    */
@@ -3148,6 +3165,7 @@
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
+
 
   /**
    * Constants
@@ -3660,6 +3678,7 @@
    * --------------------------------------------------------------------------
    */
 
+
   /**
    * Constants
    */
@@ -3739,6 +3758,7 @@
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
+
 
   /**
    * Constants
@@ -3998,6 +4018,7 @@
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
+
 
   /**
    * Constants
@@ -4260,6 +4281,7 @@
    * --------------------------------------------------------------------------
    */
 
+
   /**
    * Constants
    */
@@ -4442,6 +4464,7 @@
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
+
   const index_umd = {
     Alert,
     Button,
