@@ -10,6 +10,7 @@
 
 // Overrides
 $primary: #00865f;
+$danger: #dc2626;
 $font-family-sans-serif: "Roboto";
 $display-font-family: "Montserrat";
 $display-font-weight: 500;
@@ -20,6 +21,27 @@ $display-font-weight: 500;
 @import "maps";
 @import "mixins";
 @import "utilities";
+
+@mixin button-outline-variant(
+  $color,
+  $active-background: #F8F8F8,
+  $active-border: $color
+) {
+  --#{$prefix}btn-color: #{$color};
+  --#{$prefix}btn-border-color: #{$color};
+  --#{$prefix}btn-hover-color: #{$color};
+  --#{$prefix}btn-hover-bg: #{$active-background};
+  --#{$prefix}btn-hover-border-color: #{$color};
+  --#{$prefix}btn-focus-shadow-rgb: #{to-rgb($color)};
+  --#{$prefix}btn-active-color: #{$color};
+  --#{$prefix}btn-active-bg: #{$active-background};
+  --#{$prefix}btn-active-border-color: #{$color};
+  --#{$prefix}btn-active-shadow: #{$btn-active-box-shadow};
+  --#{$prefix}btn-disabled-color: #{$color};
+  --#{$prefix}btn-disabled-bg: transparent;
+  --#{$prefix}btn-disabled-border-color: #{$color};
+  --#{$prefix}gradient: none;
+}
 
 // Layout & components
 @import "root";
