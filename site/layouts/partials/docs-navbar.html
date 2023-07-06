@@ -49,9 +49,10 @@
 
         <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
           <li class="nav-item col-6 col-lg-auto">
-            <a class="nav-link py-2 px-0 px-lg-2" href="{{ .Site.Params.github_org }}" target="_blank" rel="noopener">
-              {{ partial "icons/github.svg" (dict "class" "navbar-nav-svg" "width" "16" "height" "16") }}
-              <small class="d-lg-none ms-2">GitHub</small>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css">
+            <a class="nav-link py-2 px-0 px-lg-2" href="{{ .Site.Params.repo }}" target="_blank" rel="noopener">
+              <span class="fab fa-gitlab" title="GitLab"></span>
+              <small class="d-lg-none ms-2">GitLab</small>
             </a>
           </li>
           <li class="nav-item col-6 col-lg-auto">
