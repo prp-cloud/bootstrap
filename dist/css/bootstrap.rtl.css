@@ -17,6 +17,8 @@
   --bs-green: #00865f;
   --bs-teal: #0d9488;
   --bs-cyan: #0891b2;
+  --bs-light-blue: #0284c7;
+  --bs-rose: #e11d48;
   --bs-black: #000;
   --bs-white: #fff;
   --bs-gray: #6c757d;
@@ -12040,5 +12042,4 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-
 /*# sourceMappingURL=bootstrap.rtl.css.map */

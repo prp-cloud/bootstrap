@@ -18,6 +18,10 @@
   hex: "#20c997"
 - name: cyan
   hex: "#0dcaf0"
+- name: light-blue
+  hex: "#0dcaf0"
+- name: rose
+  hex: "#d63384"
 - name: white
   hex: "#fff"
 - name: gray

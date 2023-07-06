@@ -170,6 +170,29 @@ $pinks: (
   "pink-900": #831843,
 );
 
+
+@import "variables";
+@import "variables-dark";
+
+$colors: (
+  "blue": $blue,
+  "indigo": $indigo,
+  "purple": $purple,
+  "pink": $pink,
+  "red": $red,
+  "orange": $orange,
+  "yellow": $yellow,
+  "green": $green,
+  "teal": $teal,
+  "cyan": $cyan,
+  "light-blue": $light-blue,
+  "rose": $rose,
+  "black": $black,
+  "white": $white,
+  "gray": $gray-600,
+  "gray-dark": $gray-800,
+);
+
 $light-blues: (
   "light-blue-50": #f0f9ff,
   "light-blue-100": #e0f2fe,
@@ -195,9 +218,6 @@ $roses: (
   "rose-800": #9f1239,
   "rose-900": #881337,
 );
-
-@import "variables";
-@import "variables-dark";
 
 @import "maps";
 @import "mixins";
