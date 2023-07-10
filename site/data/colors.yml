@@ -24,3 +24,7 @@
   hex: "#e11d48"
 - name: white
   hex: "#fff"
+- name: gray
+  hex: "#616161"
+- name: gray-dark
+  hex: "#414141"
