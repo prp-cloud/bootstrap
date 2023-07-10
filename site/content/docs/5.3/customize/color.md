@@ -484,6 +484,7 @@ Here's an example that generates text color utilities (e.g., `.text-purple-500`)
 @import "bootstrap/scss/maps";
 @import "bootstrap/scss/mixins";
 @import "bootstrap/scss/utilities";
+
 $all-colors: map-merge-multiple($blues, $indigos, $purples, $pinks, $reds, $oranges, $yellows, $greens, $teals, $cyans, $light-blues, $roses);
 
 $utilities: map-merge(
