@@ -1,5 +1,7 @@
 /* stylelint-disable scss/dollar-variable-default */
+/* stylelint-disable-next-line import-notation */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,400;0,500;1,400;1,500&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,700&display=swap");
+@import "functions";
 @import "variables";
 
 // Overrides
@@ -22,7 +24,6 @@ $rose: #e11d48;
 $danger: $red;
 $primary: $green;
 
-$green-50: #e5fff1;
 $green-100: #c8ffe1;
 $green-200: #80ffd1;
 $green-300: #00e5b0;
@@ -33,7 +34,6 @@ $green-700: #007856;
 $green-800: #006b4d;
 $green-900: #004f38;
 
-$orange-50: #fff7ed;
 $orange-100: #ffedd5;
 $orange-200: #fed7aa;
 $orange-300: #fdba74;
@@ -44,7 +44,6 @@ $orange-700: #c2410c;
 $orange-800: #9a3412;
 $orange-900: #7c2d12;
 
-$gray-50: #f8f8f8;
 $gray-100: #ededed;
 $gray-200: #c9c9c9;
 $gray-300: #adadad;
@@ -55,7 +54,6 @@ $gray-700: #585858;
 $gray-800: #414141;
 $gray-900: #2c2c2c;
 
-$red-50: #fef2f2;
 $red-100: #fee2e2;
 $red-200: #fecaca;
 $red-300: #fca5a5;
@@ -66,7 +64,6 @@ $red-700: #b91c1c;
 $red-800: #981b1b;
 $red-900: #7f1d1d;
 
-$yellow-50: #fffbeb;
 $yellow-100: #fef3c7;
 $yellow-200: #fde68a;
 $yellow-300: #fcd34d;
@@ -77,7 +74,6 @@ $yellow-700: #b45309;
 $yellow-800: #92400e;
 $yellow-900: #78350f;
 
-$teal-50: #f0fdfa;
 $teal-100: #ccfbf1;
 $teal-200: #99f6e4;
 $teal-300: #5eead4;
@@ -88,7 +84,6 @@ $teal-700: #0f766e;
 $teal-800: #115e59;
 $teal-900: #134e4a;
 
-$cyan-50: #ecfeff;
 $cyan-100: #cffafe;
 $cyan-200: #a5f3fc;
 $cyan-300: #67e8f9;
@@ -99,7 +94,6 @@ $cyan-700: #0e7490;
 $cyan-800: #155e75;
 $cyan-900: #164e63;
 
-$blue-50: #eff6ff;
 $blue-100: #dbeafe;
 $blue-200: #bfdbfe;
 $blue-300: #93c5fd;
@@ -110,7 +104,6 @@ $blue-700: #1d4ed8;
 $blue-800: #1e40af;
 $blue-900: #1e3a8a;
 
-$indigo-50: #eef2ff;
 $indigo-100: #e0e7ff;
 $indigo-200: #c7d2fe;
 $indigo-300: #a5b4fc;
@@ -121,7 +114,6 @@ $indigo-700: #4338ca;
 $indigo-800: #3730a3;
 $indigo-900: #312e81;
 
-$purple-50: #f5f3ff;
 $purple-100: #ede9fe;
 $purple-200: #ddd6fe;
 $purple-300: #c4b5fd;
@@ -132,7 +124,6 @@ $purple-700: #6d28d9;
 $purple-800: #5b21b6;
 $purple-900: #4c1d95;
 
-$pink-50: #fdf2f8;
 $pink-100: #fce7f3;
 $pink-200: #fbcfe8;
 $pink-300: #f9a8d4;
@@ -143,7 +134,6 @@ $pink-700: #be185d;
 $pink-800: #9d174d;
 $pink-900: #831843;
 
-$light-blue-50: #f0f9ff;
 $light-blue-100: #e0f2fe;
 $light-blue-200: #bae6fd;
 $light-blue-300: #7dd3fc;
@@ -154,7 +144,6 @@ $light-blue-700: #0369a1;
 $light-blue-800: #075985;
 $light-blue-900: #0c4a6e;
 
-$rose-50: #fff1f2;
 $rose-100: #ffe4e6;
 $rose-200: #fecdd3;
 $rose-300: #fda4af;
@@ -164,5 +153,31 @@ $rose-600: $rose;
 $rose-700: #be123c;
 $rose-800: #9f1239;
 $rose-900: #881337;
+
+// fusv-disable
+$light-blues: (
+  "light-blue-100": $light-blue-100,
+  "light-blue-200": $light-blue-200,
+  "light-blue-300": $light-blue-300,
+  "light-blue-400": $light-blue-400,
+  "light-blue-500": $light-blue-500,
+  "light-blue-600": $light-blue-600,
+  "light-blue-700": $light-blue-700,
+  "light-blue-800": $light-blue-800,
+  "light-blue-900": $light-blue-900
+);
+
+$roses: (
+  "rose-100": $rose-100,
+  "rose-200": $rose-200,
+  "rose-300": $rose-300,
+  "rose-400": $rose-400,
+  "rose-500": $rose-500,
+  "rose-600": $rose-600,
+  "rose-700": $rose-700,
+  "rose-800": $rose-800,
+  "rose-900": $rose-900
+);
+// fusv-enable
 
 $colors: map-merge($colors, ("light-blue": $light-blue, "rose": $rose));
