@@ -409,7 +409,7 @@ Be sure to monitor contrast ratios as you customize colors. As shown below, we'v
   <div class="col-md-4 mb-3">
     <div class="p-3 mb-2 position-relative swatch-gray-500">
       <strong class="d-block">$gray-500</strong>
-      #adb5bd
+      #777
     </div>
   {{- range $.Site.Data.grays }}
     <div class="p-3 bd-gray-{{ .name }}">$gray-{{ .name }}</div>
@@ -485,7 +485,7 @@ Here's an example that generates text color utilities (e.g., `.text-purple-500`)
 @import "bootstrap/scss/mixins";
 @import "bootstrap/scss/utilities";
 
-$all-colors: map-merge-multiple($blues, $indigos, $purples, $pinks, $reds, $oranges, $yellows, $greens, $teals, $cyans);
+$all-colors: map-merge-multiple($blues, $indigos, $purples, $pinks, $reds, $oranges, $yellows, $greens, $teals, $cyans, $light-blues, $roses);
 
 $utilities: map-merge(
   $utilities,
