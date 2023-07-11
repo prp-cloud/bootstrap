@@ -10,7 +10,6 @@ const recurse = async (dir: string): Promise<unknown> =>
 				const contents = `${await readFile(path)}`;
 				const replaced = contents.replaceAll(/(?<=(href|src(set)?)=")(?=\/docs|")/g, `/bootstrap`);
 				if (contents != replaced) return writeFile(path, replaced);
-				if (console.log())
 			})
 	);
 
