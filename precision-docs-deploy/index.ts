@@ -7,10 +7,11 @@ const recurse = async (dir: string): Promise<unknown> =>
 				const path = `${dir}/${dirent.name}`;
 				if (!dirent.isFile()) return recurse(path);
 				if (!dirent.name.endsWith(`.html`)) return;
+				// eslint-disable-next-line @typescript-eslint/restrict-template-expressions
 				const contents = `${await readFile(path)}`;
 				const replaced = contents
 					.replaceAll(/(?<=(href|src(set)?)=")(?=\/docs|\/?")/g, `/bootstrap`)
-					.replaceAll(/ga\(.+?\)/g, match => { console.log(match); return ``; });
+					.replaceAll(/ga\(.+?\)/g, ``);
 				if (contents != replaced) return writeFile(path, replaced);
 			})
 	);
