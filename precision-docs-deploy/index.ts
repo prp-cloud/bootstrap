@@ -13,5 +13,5 @@ const recurse = async (dir: string): Promise<unknown> =>
 			})
 	);
 
-await recurse(`_site`)
+await recurse(`_site`);
 process.exit();

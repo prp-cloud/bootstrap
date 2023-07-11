@@ -1,6 +1,14 @@
 {
 	"type": "module",
+	"scripts": {
+		"lint": "DEBUG=eslint:cli-engine eslint ."
+	},
 	"devDependencies": {
-		"typescript": "^5.1.3"
+		"@precisionplanting/eslint-config": "git+https://gitlab+deploy-token-1716290:7915JGjK1Cdsxughy-ma@gitlab.com/precisionplanting/eslint-config.git",
+		"typescript": "^5.1.6"
+	},
+	"eslintConfig": {
+		"extends": "@precisionplanting",
+		"root": true
 	}
 }
