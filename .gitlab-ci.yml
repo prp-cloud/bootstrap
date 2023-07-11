@@ -9,7 +9,8 @@ deploy_production:
   script:
     - npm ci
     - cd precision-docs-deploy && npm ci && npx tsc && cd ..
-    - npm run docs-build
+    - npm run test
+    - npm run netlify
     - node precision-docs-deploy
     - rsync -amz --delete _site/ cloud-qa:/var/app/cloud/htdocs/bootstrap
   only:
