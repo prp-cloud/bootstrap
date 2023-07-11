@@ -10,7 +10,7 @@ deploy_production:
     - npm ci
     - cd precision-docs-deploy && npm ci && npx tsc && cd ..
     # npm run test, minus "js-test" because it does not work on Amazon Linux
-    - npm-run-all lint dist docs-build docs-lint
+    - npx npm-run-all lint dist docs-build docs-lint
     - npm run netlify
     - node precision-docs-deploy
     - rsync -amz --delete _site/ cloud-qa:/var/app/cloud/htdocs/bootstrap
