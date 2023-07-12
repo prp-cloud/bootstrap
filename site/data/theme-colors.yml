@@ -1,20 +1,18 @@
 - name: primary
-  hex: "#0d6efd"
+  hex: "#00865f"
 - name: secondary
-  hex: "#6c757d"
-- name: success
-  hex: "#28a745"
+  hex: "#616161"
 - name: danger
-  hex: "#dc3545"
+  hex: "#dc2626"
 - name: warning
-  hex: "#ffc107"
+  hex: "#d97706"
   contrast_color: dark
 - name: info
-  hex: "#17a2b8"
+  hex: "#0891b2"
   contrast_color: dark
 - name: light
-  hex: "#f8f9fa"
+  hex: "#ededed"
   contrast_color: dark
 - name: dark
-  hex: "#343a40"
+  hex: "#2c2c2c"
   contrast_color: white
