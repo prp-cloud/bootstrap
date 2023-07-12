@@ -171,7 +171,7 @@ $rose-900: #881337;
 // fusv-disable
 $greens: map-merge(("green-50": $green-50), $greens);
 $oranges: map-merge(("orange-50": $orange-50), $oranges);
-$grays: map-merge(("gray-50": $gray-50), $grays);
+$grays: map-merge(("50": $gray-50), $grays);
 $reds: map-merge(("red-50": $red-50), $reds);
 $yellows: map-merge(("yellow-50": $yellow-50), $yellows);
 $teals: map-merge(("teal-50": $teal-50), $teals);
