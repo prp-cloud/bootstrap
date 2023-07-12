@@ -108,7 +108,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
     </tr>
     <tr>
       <td rowspan="4">
-        {{< markdown >}}**Primary —** Main theme color, used for hyperlinks, focus styles, and component and form active states.{{< /markdown >}}
+        {{< markdown >}}**Primary —** Main theme color, used for hyperlinks, focus styles, component and form active states, and positive or successful actions and information.{{< /markdown >}}
       </td>
       <td class="ps-0">
         <div class="p-3 rounded-2 bg-primary">&nbsp;</div>
@@ -139,41 +139,6 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
       </td>
       <td>
         {{< markdown >}}`--bs-primary-text-emphasis`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td rowspan="4">
-        {{< markdown >}}**Success —** Theme color used for positive or successful actions and information.{{< /markdown >}}
-      </td>
-      <td class="ps-0">
-        <div class="p-3 rounded-2 bg-success">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-success`<br>`--bs-success-rgb`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div class="p-3 rounded-2" style="background-color: var(--bs-success-bg-subtle)">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-success-bg-subtle`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div class="p-3 rounded-2" style="border: 5px var(--bs-success-border-subtle) solid">&nbsp;</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-success-border-subtle`{{< /markdown >}}
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div class="py-3 fw-bold h5" style="color: var(--bs-success-text-emphasis)">Text</div>
-      </td>
-      <td>
-        {{< markdown >}}`--bs-success-text-emphasis`{{< /markdown >}}
       </td>
     </tr>
     <tr>
@@ -399,7 +364,7 @@ Be sure to monitor contrast ratios as you customize colors. As shown below, we'v
         <strong class="d-block">${{ $color.name }}</strong>
         {{ $color.hex }}
       </div>
-      {{ range (seq 100 100 900) }}
+      {{ range slice 50 | append (seq 100 100 900) }}
       <div class="p-3 bd-{{ $color.name }}-{{ . }}">${{ $color.name }}-{{ . }}</div>
       {{ end }}
     </div>

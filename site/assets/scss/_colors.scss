@@ -41,6 +41,7 @@
 }
 
 // stylelint-disable declaration-block-single-line-max-declarations
+.bd-blue-50 { color: color-contrast($blue-50); background-color: $blue-50; }
 .bd-blue-100 { color: color-contrast($blue-100); background-color: $blue-100; }
 .bd-blue-200 { color: color-contrast($blue-200); background-color: $blue-200; }
 .bd-blue-300 { color: color-contrast($blue-300); background-color: $blue-300; }
@@ -51,6 +52,7 @@
 .bd-blue-800 { color: color-contrast($blue-800); background-color: $blue-800; }
 .bd-blue-900 { color: color-contrast($blue-900); background-color: $blue-900; }
 
+.bd-indigo-50 { color: color-contrast($indigo-50); background-color: $indigo-50; }
 .bd-indigo-100 { color: color-contrast($indigo-100); background-color: $indigo-100; }
 .bd-indigo-200 { color: color-contrast($indigo-200); background-color: $indigo-200; }
 .bd-indigo-300 { color: color-contrast($indigo-300); background-color: $indigo-300; }
@@ -61,6 +63,7 @@
 .bd-indigo-800 { color: color-contrast($indigo-800); background-color: $indigo-800; }
 .bd-indigo-900 { color: color-contrast($indigo-900); background-color: $indigo-900; }
 
+.bd-purple-50 { color: color-contrast($purple-50); background-color: $purple-50; }
 .bd-purple-100 { color: color-contrast($purple-100); background-color: $purple-100; }
 .bd-purple-200 { color: color-contrast($purple-200); background-color: $purple-200; }
 .bd-purple-300 { color: color-contrast($purple-300); background-color: $purple-300; }
@@ -71,6 +74,7 @@
 .bd-purple-800 { color: color-contrast($purple-800); background-color: $purple-800; }
 .bd-purple-900 { color: color-contrast($purple-900); background-color: $purple-900; }
 
+.bd-pink-50 { color: color-contrast($pink-50); background-color: $pink-50; }
 .bd-pink-100 { color: color-contrast($pink-100); background-color: $pink-100; }
 .bd-pink-200 { color: color-contrast($pink-200); background-color: $pink-200; }
 .bd-pink-300 { color: color-contrast($pink-300); background-color: $pink-300; }
@@ -81,6 +85,7 @@
 .bd-pink-800 { color: color-contrast($pink-800); background-color: $pink-800; }
 .bd-pink-900 { color: color-contrast($pink-900); background-color: $pink-900; }
 
+.bd-red-50 { color: color-contrast($red-50); background-color: $red-50; }
 .bd-red-100 { color: color-contrast($red-100); background-color: $red-100; }
 .bd-red-200 { color: color-contrast($red-200); background-color: $red-200; }
 .bd-red-300 { color: color-contrast($red-300); background-color: $red-300; }
@@ -91,6 +96,7 @@
 .bd-red-800 { color: color-contrast($red-800); background-color: $red-800; }
 .bd-red-900 { color: color-contrast($red-900); background-color: $red-900; }
 
+.bd-orange-50 { color: color-contrast($orange-50); background-color: $orange-50; }
 .bd-orange-100 { color: color-contrast($orange-100); background-color: $orange-100; }
 .bd-orange-200 { color: color-contrast($orange-200); background-color: $orange-200; }
 .bd-orange-300 { color: color-contrast($orange-300); background-color: $orange-300; }
@@ -101,6 +107,7 @@
 .bd-orange-800 { color: color-contrast($orange-800); background-color: $orange-800; }
 .bd-orange-900 { color: color-contrast($orange-900); background-color: $orange-900; }
 
+.bd-yellow-50 { color: color-contrast($yellow-50); background-color: $yellow-50; }
 .bd-yellow-100 { color: color-contrast($yellow-100); background-color: $yellow-100; }
 .bd-yellow-200 { color: color-contrast($yellow-200); background-color: $yellow-200; }
 .bd-yellow-300 { color: color-contrast($yellow-300); background-color: $yellow-300; }
@@ -111,6 +118,7 @@
 .bd-yellow-800 { color: color-contrast($yellow-800); background-color: $yellow-800; }
 .bd-yellow-900 { color: color-contrast($yellow-900); background-color: $yellow-900; }
 
+.bd-green-50 { color: color-contrast($green-50); background-color: $green-50; }
 .bd-green-100 { color: color-contrast($green-100); background-color: $green-100; }
 .bd-green-200 { color: color-contrast($green-200); background-color: $green-200; }
 .bd-green-300 { color: color-contrast($green-300); background-color: $green-300; }
@@ -121,6 +129,7 @@
 .bd-green-800 { color: color-contrast($green-800); background-color: $green-800; }
 .bd-green-900 { color: color-contrast($green-900); background-color: $green-900; }
 
+.bd-teal-50 { color: color-contrast($teal-50); background-color: $teal-50; }
 .bd-teal-100 { color: color-contrast($teal-100); background-color: $teal-100; }
 .bd-teal-200 { color: color-contrast($teal-200); background-color: $teal-200; }
 .bd-teal-300 { color: color-contrast($teal-300); background-color: $teal-300; }
@@ -131,6 +140,7 @@
 .bd-teal-800 { color: color-contrast($teal-800); background-color: $teal-800; }
 .bd-teal-900 { color: color-contrast($teal-900); background-color: $teal-900; }
 
+.bd-cyan-50 { color: color-contrast($cyan-50); background-color: $cyan-50; }
 .bd-cyan-100 { color: color-contrast($cyan-100); background-color: $cyan-100; }
 .bd-cyan-200 { color: color-contrast($cyan-200); background-color: $cyan-200; }
 .bd-cyan-300 { color: color-contrast($cyan-300); background-color: $cyan-300; }
@@ -141,6 +151,7 @@
 .bd-cyan-800 { color: color-contrast($cyan-800); background-color: $cyan-800; }
 .bd-cyan-900 { color: color-contrast($cyan-900); background-color: $cyan-900; }
 
+.bd-light-blue-50 { color: color-contrast($light-blue-50); background-color: $light-blue-50; }
 .bd-light-blue-100 { color: color-contrast($light-blue-100); background-color: $light-blue-100; }
 .bd-light-blue-200 { color: color-contrast($light-blue-200); background-color: $light-blue-200; }
 .bd-light-blue-300 { color: color-contrast($light-blue-300); background-color: $light-blue-300; }
@@ -151,6 +162,7 @@
 .bd-light-blue-800 { color: color-contrast($light-blue-800); background-color: $light-blue-800; }
 .bd-light-blue-900 { color: color-contrast($light-blue-900); background-color: $light-blue-900; }
 
+.bd-rose-50 { color: color-contrast($rose-50); background-color: $rose-50; }
 .bd-rose-100 { color: color-contrast($rose-100); background-color: $rose-100; }
 .bd-rose-200 { color: color-contrast($rose-200); background-color: $rose-200; }
 .bd-rose-300 { color: color-contrast($rose-300); background-color: $rose-300; }
@@ -161,6 +173,7 @@
 .bd-rose-800 { color: color-contrast($rose-800); background-color: $rose-800; }
 .bd-rose-900 { color: color-contrast($rose-900); background-color: $rose-900; }
 
+.bd-gray-50 { color: color-contrast($gray-50); background-color: $gray-50; }
 .bd-gray-100 { color: color-contrast($gray-100); background-color: $gray-100; }
 .bd-gray-200 { color: color-contrast($gray-200); background-color: $gray-200; }
 .bd-gray-300 { color: color-contrast($gray-300); background-color: $gray-300; }
