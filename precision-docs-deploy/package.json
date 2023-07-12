@@ -3,8 +3,12 @@
 	"scripts": {
 		"lint": "DEBUG=eslint:cli-engine eslint ."
 	},
+	"dependencies": {
+		"jsdom": "^22.1.0"
+	},
 	"devDependencies": {
 		"@precisionplanting/eslint-config": "git+https://gitlab+deploy-token-1716290:7915JGjK1Cdsxughy-ma@gitlab.com/precisionplanting/eslint-config.git",
+		"@types/jsdom": "^21.1.1",
 		"typescript": "^5.1.6"
 	},
 	"eslintConfig": {
