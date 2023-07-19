@@ -15,4 +15,17 @@
       }
     )
   }
+
+  for (const color of document.querySelectorAll('div[class*=swatch] ~ *')) {
+    color.className += ' d-flex align-items-center justify-content-between'
+    color.innerHTML += `
+      <span style='font-size: .75rem;'>
+        #${/* eslint-disable indent */
+          [...getComputedStyle(color).backgroundColor.matchAll(/\d+/g)]
+            .map(([n]) => Number(n).toString(16))
+            .join('')
+        /* eslint-enable indent */}
+      </span>
+    `
+  }
 })()
