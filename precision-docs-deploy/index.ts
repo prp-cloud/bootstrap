@@ -1,4 +1,4 @@
-import { readdir } from 'fs/promises';
+import { readdir, writeFile } from 'fs/promises';
 import { JSDOM } from 'jsdom';
 
 const now = Date.now();
@@ -40,7 +40,7 @@ const recurse = async (dir: string): Promise<unknown> =>
 					const key = `${val} => ${transformed}`;
 					results[key] = (results[key] ?? 0) + 1;
 				}
-			// return writeFile(path, jsdom.serialize());
+			return writeFile(path, jsdom.serialize());
 		})
 	);
 
