@@ -3,7 +3,7 @@ import { JSDOM } from 'jsdom';
 
 const now = Date.now();
 const { entries } = Object;
-const transforms: { attr: string, fn?: (val: string, node: Node) => string }[] = [
+const transforms: { attr: string, fn?: (val: string, node: Node) => string, results: Record<string, number> }[] = [
 	...[`href`, `src`, `srcset`].map(attr => ({
 		attr,
 		fn: (val: string) => val.split(/,\s*/).map(src => (/^(?=\/docs|\/$)/.test(src) ? `/bootstrap` : ``) + src).join(`,`)
@@ -15,8 +15,8 @@ const transforms: { attr: string, fn?: (val: string, node: Node) => string }[] =
 			val +
 			(nodeName == node.nodeName && !val.startsWith(`https://`) && node.rel != `canonical` ? `?${now}` : ``)
 	}))
-];
-const transformResults = transforms.map(({ attr }) => ({ attr, results: <Record<string, number>>{} }));
+]
+	.map(transform => ({ ...transform, results: {} }));
 
 const recurse = async (dir: string): Promise<unknown> =>
 	Promise.all(
@@ -26,7 +26,7 @@ const recurse = async (dir: string): Promise<unknown> =>
 			if (!dirent.name.endsWith(`.html`)) return;
 			const jsdom = await JSDOM.fromFile(path);
 			for (const node of jsdom.window.document.querySelectorAll(`*`))
-				for (const [i, { attr, fn }] of transforms.entries()) {
+				for (const { attr, fn, results } of transforms) {
 					const val = node.getAttribute(attr);
 					if (!val) continue;
 					const transformed = fn?.(val, node);
@@ -35,7 +35,6 @@ const recurse = async (dir: string): Promise<unknown> =>
 					else node.removeAttribute(attr);
 					// eslint-disable-next-line @typescript-eslint/restrict-template-expressions
 					const key = `${val} => ${transformed}`;
-					const { results } = transformResults[i]!;
 					results[key] = (results[key] ?? 0) + 1;
 				}
 			return writeFile(path, jsdom.serialize());
@@ -45,7 +44,7 @@ const recurse = async (dir: string): Promise<unknown> =>
 await recurse(`_site`);
 
 console.log( // eslint-disable-line no-console
-	transformResults.map(({ attr, results }) => ({
+	transforms.map(({ attr, results }) => ({
 		attr,
 		results: Object.fromEntries(entries(results).sort(([a], [b]) => a.localeCompare(b)))
 	}))
