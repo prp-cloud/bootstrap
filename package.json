@@ -158,6 +158,7 @@
   },
   "files": [
     "dist/{css,js}/*.{css,js,map}",
+    "index.d.ts",
     "js/{src,dist}/**/*.{js,map}",
     "js/index.{esm,umd}.js",
     "scss/**/*.scss",
