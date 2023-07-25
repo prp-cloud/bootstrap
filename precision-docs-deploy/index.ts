@@ -36,7 +36,6 @@ const recurse = async (dir: string): Promise<unknown> =>
 					if (transformed == val) continue;
 					if (transformed) node.setAttribute(attr, transformed);
 					else node.removeAttribute(attr);
-					// eslint-disable-next-line @typescript-eslint/restrict-template-expressions
 					const key = `${val} => ${transformed}`;
 					results[key] = (results[key] ?? 0) + 1;
 				}
