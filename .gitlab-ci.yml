@@ -8,7 +8,7 @@ deploy_production:
     name: precision
   script:
     - npm ci
-    - cd precision-docs-deploy && npm ci && npx tsc && cd ..
+    - cd precision-docs-deploy && npm ci && npx tsc && npm run lint && cd ..
     # npm run test, minus "js-test" because it does not work on Amazon Linux
     - npx npm-run-all lint dist docs-build docs-lint
     - npm run netlify
