@@ -58,7 +58,7 @@ Or modify the default `border-color` of a component:
 {{< example >}}
 <div class="mb-4">
   <label for="exampleFormControlInput1" class="form-label">Email address</label>
-  <input type="email" class="form-control border-success" id="exampleFormControlInput1" placeholder="name@example.com">
+  <input type="email" class="form-control border-primary" id="exampleFormControlInput1" placeholder="name@example.com">
 </div>
 
 <div class="h4 pb-2 mb-4 text-danger border-bottom border-danger">
@@ -78,34 +78,34 @@ Bootstrap `border-{color}` utilities are generated with Sass using CSS variables
 
 ### How it works
 
-Consider our default `.border-success` utility.
+Consider our default `.border-primary` utility.
 
 ```css
-.border-success {
+.border-primary {
   --bs-border-opacity: 1;
-  border-color: rgba(var(--bs-success-rgb), var(--bs-border-opacity)) !important;
+  border-color: rgba(var(--bs-primary-rgb), var(--bs-border-opacity)) !important;
 }
 ```
 
-We use an RGB version of our `--bs-success` (with the value of `25, 135, 84`) CSS variable and attached a second CSS variable, `--bs-border-opacity`, for the alpha transparency (with a default value `1` thanks to a local CSS variable). That means anytime you use `.border-success` now, your computed `color` value is `rgba(25, 135, 84, 1)`. The local CSS variable inside each `.border-*` class avoids inheritance issues so nested instances of the utilities don't automatically have a modified alpha transparency.
+We use an RGB version of our `--bs-primary` (with the value of `25, 135, 84`) CSS variable and attached a second CSS variable, `--bs-border-opacity`, for the alpha transparency (with a default value `1` thanks to a local CSS variable). That means anytime you use `.border-primary` now, your computed `color` value is `rgba(25, 135, 84, 1)`. The local CSS variable inside each `.border-*` class avoids inheritance issues so nested instances of the utilities don't automatically have a modified alpha transparency.
 
 ### Example
 
 To change that opacity, override `--bs-border-opacity` via custom styles or inline styles.
 
 {{< example >}}
-<div class="border border-success p-2 mb-2">This is default success border</div>
-<div class="border border-success p-2" style="--bs-border-opacity: .5;">This is 50% opacity success border</div>
+<div class="border border-primary p-2 mb-2">This is default primary border</div>
+<div class="border border-primary p-2" style="--bs-border-opacity: .5;">This is 50% opacity primary border</div>
 {{< /example >}}
 
 Or, choose from any of the `.border-opacity` utilities:
 
 {{< example >}}
-<div class="border border-success p-2 mb-2">This is default success border</div>
-<div class="border border-success p-2 mb-2 border-opacity-75">This is 75% opacity success border</div>
-<div class="border border-success p-2 mb-2 border-opacity-50">This is 50% opacity success border</div>
-<div class="border border-success p-2 mb-2 border-opacity-25">This is 25% opacity success border</div>
-<div class="border border-success p-2 border-opacity-10">This is 10% opacity success border</div>
+<div class="border border-primary p-2 mb-2">This is default primary border</div>
+<div class="border border-primary p-2 mb-2 border-opacity-75">This is 75% opacity primary border</div>
+<div class="border border-primary p-2 mb-2 border-opacity-50">This is 50% opacity primary border</div>
+<div class="border border-primary p-2 mb-2 border-opacity-25">This is 25% opacity primary border</div>
+<div class="border border-primary p-2 border-opacity-10">This is 10% opacity primary border</div>
 {{< /example >}}
 
 ## Width

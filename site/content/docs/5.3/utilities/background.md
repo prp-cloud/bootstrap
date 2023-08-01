@@ -57,34 +57,34 @@ As of v5.1.0, `background-color` utilities are generated with Sass using CSS var
 
 ### How it works
 
-Consider our default `.bg-success` utility.
+Consider our default `.bg-primary` utility.
 
 ```css
-.bg-success {
+.bg-primary {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-success-rgb), var(--bs-bg-opacity)) !important;
+  background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
 }
 ```
 
-We use an RGB version of our `--bs-success` (with the value of `25, 135, 84`) CSS variable and attached a second CSS variable, `--bs-bg-opacity`, for the alpha transparency (with a default value `1` thanks to a local CSS variable). That means anytime you use `.bg-success` now, your computed `color` value is `rgba(25, 135, 84, 1)`. The local CSS variable inside each `.bg-*` class avoids inheritance issues so nested instances of the utilities don't automatically have a modified alpha transparency.
+We use an RGB version of our `--bs-primary` (with the value of `25, 135, 84`) CSS variable and attached a second CSS variable, `--bs-bg-opacity`, for the alpha transparency (with a default value `1` thanks to a local CSS variable). That means anytime you use `.bg-primary` now, your computed `color` value is `rgba(25, 135, 84, 1)`. The local CSS variable inside each `.bg-*` class avoids inheritance issues so nested instances of the utilities don't automatically have a modified alpha transparency.
 
 ### Example
 
 To change that opacity, override `--bs-bg-opacity` via custom styles or inline styles.
 
 {{< example >}}
-<div class="bg-success p-2 text-white">This is default success background</div>
-<div class="bg-success p-2" style="--bs-bg-opacity: .5;">This is 50% opacity success background</div>
+<div class="bg-primary p-2 text-white">This is default primary background</div>
+<div class="bg-primary p-2" style="--bs-bg-opacity: .5;">This is 50% opacity primary background</div>
 {{< /example >}}
 
 Or, choose from any of the `.bg-opacity` utilities:
 
 {{< example >}}
-<div class="bg-success p-2 text-white">This is default success background</div>
-<div class="bg-success p-2 text-white bg-opacity-75">This is 75% opacity success background</div>
-<div class="bg-success p-2 text-dark bg-opacity-50">This is 50% opacity success background</div>
-<div class="bg-success p-2 text-dark bg-opacity-25">This is 25% opacity success background</div>
-<div class="bg-success p-2 text-dark bg-opacity-10">This is 10% opacity success background</div>
+<div class="bg-primary p-2 text-white">This is default primary background</div>
+<div class="bg-primary p-2 text-white bg-opacity-75">This is 75% opacity primary background</div>
+<div class="bg-primary p-2 text-dark bg-opacity-50">This is 50% opacity primary background</div>
+<div class="bg-primary p-2 text-dark bg-opacity-25">This is 25% opacity primary background</div>
+<div class="bg-primary p-2 text-dark bg-opacity-10">This is 10% opacity primary background</div>
 {{< /example >}}
 
 ## CSS
