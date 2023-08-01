@@ -19,7 +19,7 @@ const transforms = [
 			(nodeName == node.nodeName && !val.startsWith(`https://`) && node.rel != `canonical` ? `?${now}` : ``)
 	}))
 ]
-	.map(transform => ({ ...transform, results: <Record<string, number>>{} }));
+	.map(transform => ({ ...transform, results: {} as Record<string, number> }));
 
 const recurse = async (dir: string): Promise<unknown> =>
 	Promise.all(
