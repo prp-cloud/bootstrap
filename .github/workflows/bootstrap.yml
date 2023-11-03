@@ -1,0 +1,29 @@
+name: precisionplanting/bootstrap
+on:
+  push:
+  workflow_dispatch:
+concurrency:
+  group: "${{ github.ref }}"
+  cancel-in-progress: true
+jobs:
+  deploy_production:
+    runs-on: self-hosted
+    if: github.ref == 'refs/heads/precision'
+    environment:
+      name: precision
+    timeout-minutes: 60
+    steps:
+    - uses: actions/checkout@v3.5.0
+      with:
+        fetch-depth: 20
+        lfs: true
+        persist-credentials: false
+    - run: echo '' > /home/ec2-user/.ssh/known_hosts
+    - run: ssh-keyscan -t ed25519 10.118.198.62 > /home/ec2-user/.ssh/known_hosts
+    - run: cat /home/ec2-user/.ssh/known_hosts
+    - run: npm ci
+    - run: cd precision-docs-deploy && npm ci && npx tsc && npm run lint && cd ..
+    - run: npx npm-run-all lint dist docs-build docs-lint
+    - run: npm run netlify
+    - run: node precision-docs-deploy
+    - run: rsync -amz --delete _site/ cloud-qa:/var/app/cloud/htdocs/bootstrap
