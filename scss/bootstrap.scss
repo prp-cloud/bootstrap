@@ -12,34 +12,36 @@
 @import "mixins";
 @import "utilities";
 
+// stylelint-disable-next-line scss/dollar-variable-default
 $all-colors: map-merge-multiple($blues, $indigos, $purples, $pinks, $reds, $oranges, $yellows, $greens, $teals, $cyans, $light-blues, $roses);
 
+// stylelint-disable-next-line scss/dollar-variable-default
 $utilities: map-merge(
-	$utilities,
-	(
-		"background-color": map-merge(
-			map-get($utilities, "background-color"),
-			(
-				values: map-merge(
-					map-get(map-get($utilities, "background-color"), "values"),
-					(
-						$all-colors
-					),
-				),
-			),
-		),
-		"color": map-merge(
-			map-get($utilities, "color"),
-			(
-				values: map-merge(
-					map-get(map-get($utilities, "color"), "values"),
-					(
-						$all-colors
-					),
-				),
-			),
-		),
-	)
+  $utilities,
+  (
+    "background-color": map-merge(
+      map-get($utilities, "background-color"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "background-color"), "values"),
+          (
+            $all-colors
+          ),
+        ),
+      ),
+    ),
+    "color": map-merge(
+      map-get($utilities, "color"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "color"), "values"),
+          (
+            $all-colors
+          ),
+        ),
+      ),
+    ),
+  )
 );
 
 // Layout & components

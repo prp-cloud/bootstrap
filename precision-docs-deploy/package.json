@@ -1,17 +1,10 @@
 {
 	"type": "module",
-	"scripts": {
-		"lint": "DEBUG=eslint:cli-engine eslint ."
-	},
 	"dependencies": {
 		"jsdom": "^22.1.0"
 	},
 	"devDependencies": {
 		"@types/jsdom": "^21.1.6",
 		"typescript": "^5.3.3"
-	},
-	"eslintConfig": {
-		"extends": "@precisionplanting",
-		"root": true
 	}
 }
