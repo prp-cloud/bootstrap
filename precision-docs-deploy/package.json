@@ -7,7 +7,6 @@
 		"jsdom": "^22.1.0"
 	},
 	"devDependencies": {
-		"@precisionplanting/eslint-config": "git+https://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@github.com/prp-cloud/eslint-config.git",
 		"@types/jsdom": "^21.1.6",
 		"typescript": "^5.3.3"
 	},

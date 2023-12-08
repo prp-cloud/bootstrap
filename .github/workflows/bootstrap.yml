@@ -22,7 +22,7 @@ jobs:
     - run: ssh-keyscan -t ed25519 10.118.198.62 > /home/ec2-user/.ssh/known_hosts
     - run: cat /home/ec2-user/.ssh/known_hosts
     - run: npm ci
-    - run: cd precision-docs-deploy && npm ci && npx tsc && npm run lint && cd ..
+    - run: cd precision-docs-deploy && npm ci && npx tsc && cd ..
     - run: npx npm-run-all lint dist docs-build docs-lint
     - run: npm run netlify
     - run: node precision-docs-deploy
