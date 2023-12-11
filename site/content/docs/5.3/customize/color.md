@@ -368,7 +368,7 @@ Be sure to monitor contrast ratios as you customize colors. As shown below, we'v
       <div class="p-3 bd-{{ $color.name }}-{{ . }}">
         <div>
           ${{ $color.name }}-{{ . }}
-          <div style="font-size: 0.75rem">
+          <div style="font-size:0.75rem">
             <div>.bg-{{$color.name}}-{{.}}</div>
             <div>.text-{{$color.name}}-{{.}}</div>
           </div>
