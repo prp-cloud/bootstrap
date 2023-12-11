@@ -368,9 +368,9 @@ Be sure to monitor contrast ratios as you customize colors. As shown below, we'v
       <div class="p-3 bd-{{ $color.name }}-{{ . }}">
         <div class="d-flex flex-column">
           <span>${{ $color.name }}-{{ . }}</span>
-          <div style="font-size: 12px" class="d-flex flex-column">
-            <span>bg-{{$color.name}}-{{.}}</span>
-            <span>text-{{$color.name}}-{{.}}</span>
+          <div style="font-size: 0.75rem" class="d-flex flex-column">
+            <span>.bg-{{$color.name}}-{{.}}</span>
+            <span>.text-{{$color.name}}-{{.}}</span>
           </div>
         </div>
       </div>
@@ -379,13 +379,22 @@ Be sure to monitor contrast ratios as you customize colors. As shown below, we'v
     {{ end -}}
   {{ end -}}
 
-  <div class="col-md-4 mb-3">
+  <div class="col-md-4 mb-3 border">
     <div class="p-3 mb-2 position-relative swatch-gray-500">
       <strong class="d-block">$gray-500</strong>
       #777
     </div>
   {{- range $.Site.Data.grays }}
-    <div class="p-3 bd-gray-{{ .name }}">$gray-{{ .name }}</div>
+    <div class="p-3 bd-gray-{{ .name }}">
+      <div class="flex">
+        $gray-{{ .name }}
+         <div style="font-size: 0.75rem" class="d-flex flex-column">
+            <span>.bg-gray-{{ .name }}</span>
+            <span>.text-gray-{{ .name }}</span>
+         </div>
+      </div>
+    </div>
+
   {{ end -}}
   </div>
   {{< /theme-colors.inline >}}
