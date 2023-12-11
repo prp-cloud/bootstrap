@@ -365,11 +365,13 @@ Be sure to monitor contrast ratios as you customize colors. As shown below, we'v
         {{ $color.hex }}
       </div>
       {{ range slice 50 | append (seq 100 100 900) }}
-      <div class="p-3 flex bd-{{ $color.name }}-{{ . }}">
+      <div class="p-3 bd-{{ $color.name }}-{{ . }}">
         <div class="d-flex flex-column">
           <span>${{ $color.name }}-{{ . }}</span>
-          <span>bg-{{$color.name}}-{{.}}</span>
-          <span>text-{{$color.name}}-{{.}}</span>
+          <div style="font-size: 12px" class="d-flex flex-column">
+            <span>bg-{{$color.name}}-{{.}}</span>
+            <span>text-{{$color.name}}-{{.}}</span>
+          </div>
         </div>
       </div>
       {{ end }}
