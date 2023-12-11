@@ -368,9 +368,9 @@ Be sure to monitor contrast ratios as you customize colors. As shown below, we'v
       <div class="p-3 bd-{{ $color.name }}-{{ . }}">
         <div class="d-flex flex-column">
           <span>${{ $color.name }}-{{ . }}</span>
-          <div style="font-size: 0.75rem" class="d-flex flex-column">
-            <span>.bg-{{$color.name}}-{{.}}</span>
-            <span>.text-{{$color.name}}-{{.}}</span>
+          <div style="font-size: 0.75rem">
+            <div>.bg-{{$color.name}}-{{.}}</div>
+            <div>.text-{{$color.name}}-{{.}}</div>
           </div>
         </div>
       </div>
@@ -388,9 +388,9 @@ Be sure to monitor contrast ratios as you customize colors. As shown below, we'v
     <div class="p-3 bd-gray-{{ .name }}">
       <div class="flex">
         $gray-{{ .name }}
-         <div style="font-size: 0.75rem" class="d-flex flex-column">
-            <span>.bg-gray-{{ .name }}</span>
-            <span>.text-gray-{{ .name }}</span>
+         <div style="font-size: 0.75rem" >
+            <div>.bg-gray-{{ .name }}</div>
+            <div>.text-gray-{{ .name }}</div>
          </div>
       </div>
     </div>
