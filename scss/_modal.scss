@@ -52,9 +52,9 @@
 // Shell div to position the modal with bottom padding
 .modal-dialog {
   position: relative;
+  top: var(--header-height, 0);
   width: auto;
   margin: var(--#{$prefix}modal-margin);
-  top: var(--header-height, 0);
   // allow clicks to pass through for custom click handling to close modal
   pointer-events: none;
 
